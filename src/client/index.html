@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rebel</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/markdown.css">
+</head>
+
+<body>
+
+    <div class="row">
+        <div id="left-panel">
+            <div id="tool-box">
+                <div id="btnNewNote" class="tool-button" style="background-image:url('images/icon-add.svg')"></div>
+                <div id="btnPrintNote" class="tool-button" style="background-image:url('images/icon-print.svg')"></div>
+                <div id="btnToggleDarkMode" class="tool-button" style="background-image:url('images/icon-dark-mode.svg')"></div>
+                <div id="btnRemoveNote" class="tool-button" style="background-image:url('images/icon-remove.svg')"></div>
+            </div>
+            <div id="note-list"></div>
+        </div>
+        <div id="note-container">
+        </div>
+        <div id="right-panel">
+            <div id="navigation-container"></div>
+        </div>
+    </div>
+
+    <script src="js/render.js"></script>
+    <script src="js/editor.js"></script>
+    <script src="js/index.js"></script>
+
+</body>
+
+</html>

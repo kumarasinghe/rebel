@@ -1,0 +1,16 @@
+{
+    "name": "rebel",
+    "main": "app.js",
+    "window": {
+        "icon": "client/images/rebel.svg"
+    },
+    "scripts": {
+        "start": "node_modules/nw-sdk/bin/nw .",
+        "build-unix": "cd .. && bash build-unix.sh"
+    },
+    "chromium-args": "--enable-logging=stderr",
+    "dependencies": {
+        "nw-sdk": "npm:nw@^0.48.2-sdk",
+        "nw": "^0.48.2"
+    }
+}

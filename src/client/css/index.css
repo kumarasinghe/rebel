@@ -1,0 +1,164 @@
+@font-face {
+    font-family: OpenSans;
+    src: url(./../fonts/OpenSans-Regular.ttf);
+}
+
+:root {
+    --default-font: normal 18px OpenSans;
+    --default-font-color: rgb(50, 50, 50);
+    --line-spacing: 5px;
+    --border-color: gainsboro;
+    --primary-background: #f8f8f8;
+    --secondary-background: white;
+    --hover-background: floralwhite;
+    --selected-background: floralwhite;
+    --note-padding: 25px 30px;
+    --active-line-background: rgb(240, 240, 230);
+    --line-hover-background: rgb(244, 244, 234);
+    --scrollbar-color:rgba(0,0,0,.1)
+}
+
+*{
+    font: var(--default-font);
+}
+
+body{
+    margin: 0;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+  
+::-webkit-scrollbar-track {
+    background: transparent; 
+}
+   
+
+::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-color); 
+}
+  
+.row{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+#left-panel{
+    min-width: 14em;
+    max-width: 14em;
+    height: 100vh;
+    box-sizing: border-box;
+    background-color: var(--secondary-background);
+    border-right: 1px solid var(--border-color);
+    color:rgb(50, 50, 50);
+    overflow: auto;
+}
+
+#tool-box{
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+    background: var(--primary-background);
+}
+
+.tool-button{
+    width: 1.15em;
+    height: 1.15em;
+    display: inline-block;
+    margin: 0.75em 0 0.75em 0.75em;
+    cursor: pointer;
+    background-size: cover;
+    background-position:center;
+}
+
+.tool-button:last-child{
+    float: right;
+    margin: 0.75em;
+}
+
+.tool-button:hover{
+    background-color: var(--hover-background);
+}
+
+.note-entry{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.75em;
+    padding: 1em;
+    border-bottom: 1px solid var(--border-color);
+    font-weight: bold;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.note-entry-selected{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.75em;
+    padding: 1em;
+    border-bottom: 1px solid var(--border-color);
+    font-weight: bold;
+    cursor: pointer;
+    background: var(--selected-background);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#right-panel{
+    background: var(--secondary-background);
+    border: 1px solid var(--border-color);
+    min-width: 10em;
+    max-width: 10em;
+    padding: 0.5em;
+    overflow: auto;
+}
+
+.nav-link{
+    display: block;
+    font-weight: lighter;
+    font-size: 0.7em;
+    cursor: pointer;
+    padding: 0.5em;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.nav-link:hover{
+    background: var(--hover-background);
+}
+
+#note-container{
+    flex-grow: 1;
+    background: var(--primary-background);
+    padding: var(--note-padding);
+    overflow-y: scroll;
+}
+
+.element-source{
+    display: block;
+    border: none;
+    outline: none;
+    margin:0 0 var(--line-spacing) 0;
+    padding:0;
+    width: 100%;
+    color: var(--default-font-color);
+    background: var(--active-line-background);
+    white-space: pre-wrap;
+}
+
+.element{
+    display: block;
+    border: none;
+    outline: none;
+    margin:0 0 var(--line-spacing) 0;
+    padding:0;
+    color: var(--default-font-color);
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.element:hover{
+    cursor: text;
+    background: var(--line-hover-background)
+}

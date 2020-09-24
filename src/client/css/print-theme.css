@@ -1,0 +1,15 @@
+:root {
+    --default-font-color: rgb(20, 20, 20);
+    --line-spacing: 5px;
+    --primary-background: transparent;
+    --line-hover-background: transparent;
+    --hover-background: transparent;
+}
+
+#left-panel{
+    display: none;
+}
+
+#right-panel{
+    display: none;
+}
