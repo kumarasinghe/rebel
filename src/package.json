@@ -2,7 +2,7 @@
     "name": "rebel",
     "main": "app.js",
     "window": {
-        "icon": "client/images/rebel.svg"
+        "icon": "client/images/rebel.png"
     },
     "scripts": {
         "start": "node_modules/nw-sdk/bin/nw .",
